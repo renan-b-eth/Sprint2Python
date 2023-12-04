@@ -50,12 +50,7 @@ def moverCameraMouse(x,y, segundos):
         if(i > 3):
             break
      
-     
- 
-   
- 
-def sregra():
-    messagebox.showinfo("2 - Regra de Negócio", "Usabilidade Intuitiva: Garantir que o sistema seja fácil de usar, com instruções claras para ativar e desativar a funcionalidade do mouse baseado em câmera, para permitir a acessibilidade para pessoas com dificuldades motoras.")
+    
  
 opcao1 = Menu(menu, tearoff=0)
 opcao1.add_command(label= "Acessar Produtos", command= lambda: acessarSiteProdutos("https://www.salesforce.com/br/products/"))
