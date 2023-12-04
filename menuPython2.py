@@ -1,44 +1,23 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter as tk
+import webbrowser
+import subprocess
+import os
 
 root = Tk()
 #criacao menu
 menu= Menu(root)
 root.config(menu=menu)
-root.title("Menu InovaAcess - Primeira Sprint")
+root.title("Menu InovaAcess - Segunda Sprint")
 root.geometry("500x500")
-fundo = PhotoImage(file="logo8.png")
-fundo1 = Label(root, image=fundo).place(x=1, y=1, relheight=1, relwidth=1)
+#fundo = PhotoImage(file="logo8.png")
+#fundo1 = Label(root, image=fundo).place(x=1, y=1, relheight=1, relwidth=1)
 root.resizable(False, False)
 
 
-#var = tk.StringVar()
-#var.set("TITULO PRIMEIRA FUNCIONALIDADE")
-#mylabel = tk.Label(root, textvariable=var)
-#mylabel.pack()
-
-
-
-
-def pfuncionalidade():
-    root2 = Tk()
-    root2.geometry("500x500")
-    root2.title("1 - Funcionalidade")
-
-    var = tk.StringVar()
-    #var.set("abriu")
-    mylabel = tk.Label(root, textvariable=var)
-    mylabel.pack()
-
-    messagebox.showinfo('Texto 1 - Funcionalidade ', \
-      'Pensando nisso, optamos a princípio em implantar um sistema onde a pessoa quase não irá precisar fazer o uso do mouse. Ela apenas terá que determinar um ponto de foco no seu rosto, para que faça a função do mouse. E movimentando o rosto, irá movimentar o mouse automaticamente, sem precisar fazer o uso das mãos. Para ativar esse recurso, a pessoa terá que selecionar a opção desejada no assistente virtual, permitir o acesso a imagem, ativando assim, o recurso de câmera mouse.')
-    
-    #esse codigo não funciona 
-    #var = tk.StringVar()
-    #var.set("TITULO PRIMEIRA FUNCIONALIDADE")
-    #mylabel = tk.Label(root2, textvariable=var)
-    #mylabel.pack()
+def acessarSiteProdutos(url):
+    return webbrowser.open(url)
 
 
 def sfuncionalidade():
@@ -63,23 +42,22 @@ def qfuncionalidade():
 def quemSomos():
     messagebox.showinfo("Quem Somos?", "Larissa Kawaguti Feliciano - 553356\nLucas Alcântara Carvalho - 95111\nRenan Bezerra dos Santos - 553228")
 
-def pregra():
-    messagebox.showinfo("1 - Regra de Negócio", "Privacidade e Consentimento: Garantir que os usuários entendam e concordem com o uso da câmera para a funcionalidade do mouse e que os dados capturados sejam protegidos de acordo com as regulamentações de privacidade.")
+def acessarDiretorio(diretorio):
+   return os.startfile(diretorio)
+
+def acessarCameraMouse():
+    return None
+   
 
 def sregra():
     messagebox.showinfo("2 - Regra de Negócio", "Usabilidade Intuitiva: Garantir que o sistema seja fácil de usar, com instruções claras para ativar e desativar a funcionalidade do mouse baseado em câmera, para permitir a acessibilidade para pessoas com dificuldades motoras.")
 
 opcao1 = Menu(menu, tearoff=0)
-opcao1.add_command(label= "1 - Funcionalidade", command=pfuncionalidade)
-opcao1.add_command(label= "2 - Funcionalidade", command=sfuncionalidade)
-opcao1.add_command(label= "3 - Funcionalidade Futuramente", command=tfuncionalidade)
-opcao1.add_command(label= "4 - Funcionalidade Futuramente", command=qfuncionalidade)
+opcao1.add_command(label= "Acessar Site Produtos", command= lambda: acessarSiteProdutos("https://www.salesforce.com/br/products/"))
 
 opcao2 = Menu(menu, tearoff=0)
-opcao2.add_command(label= "1 - Regra de negócios", command=pregra)
-opcao2.add_command(label= "2 - Regra de negócios", command=sregra)
-opcao2.add_command(label= "3 - Regra de negócios Futuramente")
-opcao2.add_command(label= "4 - Regra de negócios Futuramente")
+opcao2.add_command(label= "Acessar Camera Mouse", command= lambda: acessarCameraMouse)
+opcao2.add_command(label= "Acessar Teclado Virtual", command=lambda: acessarDiretorio('C:\\Windows\\System32\\osk.exe'))
 
 sobrenos = Menu(menu, tearoff=0)
 sobrenos.add_command(label= "Quem somos", command=quemSomos)
@@ -88,9 +66,9 @@ sair = Menu(menu, tearoff=0)
 sair.add_command(label="Sair", command=exit)
 
 
-menu.add_cascade(label = "Funcionalidades", menu= opcao1)
-menu.add_cascade(label = "Regra de negócios", menu= opcao2)
-menu.add_cascade(label = "Sobre Nos", menu= sobrenos)
+menu.add_cascade(label = "Produtos", menu= opcao1)
+menu.add_cascade(label = "Acessibilidade", menu= opcao2)
+menu.add_cascade(label = "Quem somos", menu= sobrenos)
 menu.add_cascade(label = "Sair", menu= sair)
 
 
