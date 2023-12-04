@@ -15,6 +15,6 @@ Menu Python - Mostrando as funcionalidades do sistema
   * pip install pyautogui
 
   
-https://youtu.be/GxoEyFF4lbI
+https://youtu.be/3Z0PKxLdDhk
 
   Link do vídeo do sistema funcionando e explicando o codigo.
