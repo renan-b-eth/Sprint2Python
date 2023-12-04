@@ -18,3 +18,5 @@ Menu Python - Mostrando as funcionalidades do sistema
 https://youtu.be/3Z0PKxLdDhk
 
   Link do vídeo do sistema funcionando e explicando o codigo.
+
+  * OBS: Professor, vou deixar aqui por via das duvidas tb... os commits que estão como commit lari, mesmo estando no perfil do renan.. fui eu que fiz, a LARISSA. Eu tinha esquecido de dar git config antes..... e foi como se fosse o renan... e esses ultimos que eu dei commit, que estão mesmo no meu perfil... foram so testes p ver se agora estaria indo. Obrigada
