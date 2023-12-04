@@ -27,7 +27,8 @@ def criarBotao():
     # o python no backend será utilizado para outros fins e para aproveitar suas bibliotecas.)
     btnMoverMouse = Button(root, text = 'Mover Camera',
                        command = lambda: moverCameraMouse(50,50,2))                  
-    btnMoverMouse.place(x=450, y=300, anchor=CENTER)
+    btnMoverMouse.place(x=450, y=300, anchor=CENTER)  #Prof, é a larissa.. eu fiz os ultimos commits, so que eu nao tinha dado git config, entao foi tudo no perfil do renan.. mas os que estão com nome commit lari, fui eu, e nao ele. e o commit "lari testando" fui eu testando p ver se o meu git config tinha ido. entao por favor, desconsidere. 
+                                                       
     btnMoverMouse.configure(height=5, width=15, bg="#CADFEE")
    
  
