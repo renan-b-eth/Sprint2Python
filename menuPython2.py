@@ -58,11 +58,13 @@ def sregra():
     messagebox.showinfo("2 - Regra de Negócio", "Usabilidade Intuitiva: Garantir que o sistema seja fácil de usar, com instruções claras para ativar e desativar a funcionalidade do mouse baseado em câmera, para permitir a acessibilidade para pessoas com dificuldades motoras.")
  
 opcao1 = Menu(menu, tearoff=0)
-opcao1.add_command(label= "Acessar Site Produtos", command= lambda: acessarSiteProdutos("https://www.salesforce.com/br/products/"))
+opcao1.add_command(label= "Acessar Produtos", command= lambda: acessarSiteProdutos("https://www.salesforce.com/br/products/"))
  
 opcao2 = Menu(menu, tearoff=0)
 opcao2.add_command(label= "Acessar Camera Mouse", command= lambda: criarBotao())
-opcao2.add_command(label= "Acessar Teclado Virtual", command=lambda: acessarDiretorio('C:\\Windows\\System32\\osk.exe'))
+
+opcao3 = Menu(menu, tearoff=0)
+opcao3.add_command(label= "Acessar Teclado Virtual", command=lambda: acessarDiretorio('C:\\Windows\\System32\\osk.exe'))
  
 sobrenos = Menu(menu, tearoff=0)
 sobrenos.add_command(label= "Quem somos", command=quemSomos)
@@ -72,7 +74,8 @@ sair.add_command(label="Sair", command=exit)
  
  
 menu.add_cascade(label = "Produtos", menu= opcao1)
-menu.add_cascade(label = "Acessibilidade", menu= opcao2)
+menu.add_cascade(label = "Acessibilidade - Camera Mouse", menu= opcao2)
+menu.add_cascade(label = "Acessibilidade - Teclado Virtual", menu= opcao3)
 menu.add_cascade(label = "Quem somos", menu= sobrenos)
 menu.add_cascade(label = "Sair", menu= sair)
  
