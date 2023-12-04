@@ -1,14 +1,20 @@
-# Sprint2Python
+# Sprint2 Python
+Menu Python - Mostrando as funcionalidades do sistema
 
-melhorar esse sistema
 
-Rotinas no Menu (40 pontos): Torne pelo menos três rotinas do menu completamente funcionais.
-Garanta clareza na descrição das rotinas para facilitar a navegação de usuários novatos.
-• Modularização e Parâmetros (20 pontos): Utilize funções ou procedimentos para segmentar a lógica
-das rotinas. Passe informações entre módulos usando parâmetros.
-• Estruturas de Controle (20 pontos): Empregue `corretamente` estruturas condicionais e de repetição
-conforme necessário.
-• Dados e Variáveis (10 pontos): Faça `bom uso` de variáveis locais e globais para armazenar e
-manipular dados.
-• Usabilidade (10 pontos): Forneça orientações claras durante a entrada de dados e sinalize eventuais
-erros ao usuário.
+# Integrantes
+
+* Larissa Kawaguti Feliciano - 553356
+* Lucas Alcântara Carvalho - 95111
+* Renan Bezerra dos Santos - 553228
+
+* Um mini sistema explicando nossas principais funcionabildiades que iremos implementar na web usando algumas bibliotecas do python e movimentação da webcam usando tesorflow do js e juntar com o python 
+
+  É necessário a instalação do pyautogui:
+
+  * pip install pyautogui
+
+  
+https://youtu.be/GxoEyFF4lbI
+
+  Link do vídeo do sistema funcionando e explicando o codigo.
