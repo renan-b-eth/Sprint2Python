@@ -13,7 +13,7 @@ root = Tk()
 menu= Menu(root)
 root.config(menu=menu)
 root.title("Menu InovaAcess - Segunda Sprint")
-root.geometry("500x500")
+root.geometry("900x500")
 #fundo = PhotoImage(file="logo8.png")
 #fundo1 = Label(root, image=fundo).place(x=1, y=1, relheight=1, relwidth=1)
 root.resizable(False, False)
@@ -25,8 +25,8 @@ def criarBotao():
     # o python no backend será utilizado para outros fins e para aproveitar suas bibliotecas.)
     btnMoverMouse = Button(root, text = 'Mover Camera',
                        command = lambda: moverCameraMouse(50,50,2))                  
-    btnMoverMouse.place(x=100, y=100, anchor=CENTER)
-    btnMoverMouse.configure(height=20, width=20, bg="#CDAA64")
+    btnMoverMouse.place(x=450, y=300, anchor=CENTER)
+    btnMoverMouse.configure(height=5, width=15, bg="#CADFEE")
    
  
 def acessarSiteProdutos(url):
@@ -73,10 +73,10 @@ sair = Menu(menu, tearoff=0)
 sair.add_command(label="Sair", command=exit)
  
  
-menu.add_cascade(label = "Produtos", menu= opcao1)
-menu.add_cascade(label = "Acessibilidade - Camera Mouse", menu= opcao2)
-menu.add_cascade(label = "Acessibilidade - Teclado Virtual", menu= opcao3)
-menu.add_cascade(label = "Quem somos", menu= sobrenos)
+menu.add_cascade(label = "Produtos      ", menu= opcao1)
+menu.add_cascade(label = "Acessibilidade - Camera Mouse      ", menu= opcao2)
+menu.add_cascade(label = "Acessibilidade - Teclado Virtual      ", menu= opcao3)
+menu.add_cascade(label = "Quem somos      ", menu= sobrenos)
 menu.add_cascade(label = "Sair", menu= sair)
  
  
